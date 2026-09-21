@@ -12,7 +12,7 @@ please cite this repository.
 **Recommended citation (APA style):**
 
 Rodríguez-Fajardo, L. M. (2026). *Refinitiv with Python: Educational
-Research Tutorials* (Version 1.0.0) [Computer software]. Zenodo.
+Research Tutorials* (Version 1.0.0). Zenodo.
 https://doi.org/10.5281/zenodo.22881554
 
 **BibTeX:**

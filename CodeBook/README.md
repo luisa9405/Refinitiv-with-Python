@@ -1,27 +1,44 @@
-# CodeBook · Integrated Python in LSEG Workspace
+# CodeBook — Educational Python Tutorials
 
-These self-contained notebooks are intended to be run **inside CodeBook**, the notebook environment integrated with Workspace. You do not need a separate local Python installation to follow them. The examples use the `refinitiv.data` library and the permissions available to your Workspace account.
+**Author:** Luisa María Rodríguez-Fajardo  
+**Environment:** LSEG Workspace → CodeBook (Python)  
+**Project:** [Refinitiv with Python](https://github.com/luisa9405/Refinitiv-with-Python)
 
-## Before starting
+## Start here
 
-Open Workspace → CodeBook; create/open a notebook in the project, copy/upload the notebook you want, and execute its cells from top to bottom. The notebook opens a session via `rd.open_session()`. If your CodeBook environment has already opened a session, adapt that cell to your environment.
+Open each `.ipynb` in CodeBook, run its cells in order, and inspect the returned data before using them in research. Examples are independent and use a few predefined instruments; no external Python installation is required. Each notebook creates an `output/` folder only when executed. Do not publish vendor-licensed data exports in the repository.
 
-The `output/` directory is created within the notebook's current working directory. You may need to **download resulting CSVs** from CodeBook to your computer. The `.gitignore` at the repository root excludes generated outputs from version control.
+**Existing introductory notebooks (retain your current files):**
 
-## Tutorials
+- `01_Companies_by_Country.ipynb` — Screen Spanish-headquartered companies.
+- `02_Company_Information.ipynb` — Retrieve a company profile.
+- `03_Financial_Data_and_Monthly_Prices.ipynb` — Fundamentals and monthly stock-price observations.
 
-| Notebook | What you learn | Output |
-|---|---|---|
-| [01 · Companies by country](01_Companies_by_Country.ipynb) | `SCREEN()`, headquarters-country filters, alphabetical ordering and organization identifiers | `companies_spain.csv` |
-| [02 · Company information](02_Company_Information.ipynb) | Retrieve a company profile and repeat the same request for multiple RICs | `company_profiles_spain.csv` |
-| [03 · Financial data and monthly prices](03_Financial_Data_and_Monthly_Prices.ipynb) | Annual financial fields vs. monthly stock-price observations and date/frequency parameters | `financial_data_spain.csv`, `monthly_prices_spain_2024_2025.csv` |
+**Additional short demonstrations:**
 
-## Concepts that matter for research
+| Notebook | Scope |
+|---|---|
+| [`04_Historical_Financial_Data.ipynb`](04_Historical_Financial_Data.ipynb) | Historical financial data |
+| [`05_Financial_Ratios.ipynb`](05_Financial_Ratios.ipynb) | Financial ratios |
+| [`06_ESG_Data.ipynb`](06_ESG_Data.ipynb) | ESG data |
+| [`07_Ownership.ipynb`](07_Ownership.ipynb) | Ownership by investor category |
+| [`08_Board_of_Directors.ipynb`](08_Board_of_Directors.ipynb) | Board of directors |
+| [`09_Analyst_Estimates.ipynb`](09_Analyst_Estimates.ipynb) | Analyst estimates |
+| [`10_Corporate_Events_Dividends.ipynb`](10_Corporate_Events_Dividends.ipynb) | Corporate events: dividends |
+| [`11_Index_Constituents.ipynb`](11_Index_Constituents.ipynb) | Index constituents |
+| [`12_Peer_Comparison.ipynb`](12_Peer_Comparison.ipynb) | Peer comparison |
+| [`13_Macroeconomic_FX.ipynb`](13_Macroeconomic_FX.ipynb) | Macroeconomic indicators: exchange rates |
+| [`14_Firm_Year_Panel.ipynb`](14_Firm_Year_Panel.ipynb) | A simple firm-year panel |
 
-- A headquarters-country filter selects firms with headquarters in that country; it does **not** establish all countries in which a multinational operates.
-- A **RIC** identifies an instrument; an **organization PermID** identifies an organization. One organization can be associated with multiple instruments.
-- `FY0` refers to a fiscal reporting period; `Frq="M"` with a market-price field requests **monthly market observations**, not monthly accounting statements.
-- Validate field names, field availability, business classification, reporting dates and units in **CodeCreator / Data Item Browser**. The returned column labels may differ between fields or environments.
-- Compare extracts with Workspace Screener using matching selection criteria. Results, licensing and coverage can change over time.
+## Scope and reproducibility
 
-**No access credentials, exported licensed data, or proprietary screenshots are included.** These notebooks have been validated for notebook structure and Python syntax but have **not been executed against a live LSEG session**. Confirm data-item codes and entitlement coverage in your own Workspace environment.
+These are short introductory extraction examples, **not** complete data-collection pipelines or empirical research methods. Individual data-item availability, reporting periods, date conventions, permissions and returned column labels may differ across subscriptions. Check each field in Data Item Browser / CodeCreator; a successful request does not establish a variable’s research validity.
+
+- Fundamental values refer to fiscal reporting periods; a fixed calendar window does not guarantee the same fiscal year for every firm.
+- Index constituents represent the chain snapshot at the time of request, not historical membership.
+- ESG snapshots and ownership statistics should not be treated as historical point-in-time data by default.
+- The firm-year notebook demonstrates the shape of an annual extract; it is not an audited balanced panel and does not merge ESG or board data.
+
+## Citation and data attribution
+
+If these teaching notebooks contribute to a thesis, publication or scholarly teaching material, please cite the repository using the GitHub **“Cite this repository”** link, enabled by [`CITATION.cff`](../CITATION.cff). Cite LSEG/Refinitiv separately as the underlying data provider, following your institution’s data-access and licensing conditions. Citation is requested, not an access restriction or guarantee that every user will cite.

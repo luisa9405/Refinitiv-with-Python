@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you reuse these teaching notebooks or software in scholarly work, please cite this repository and cite LSEG separately as the data provider."
+title: "Refinitiv with Python: Educational Research Tutorials"
+type: software
+authors:
+  - family-names: "Rodríguez-Fajardo"
+    given-names: "Luisa María"
+repository-code: "https://github.com/luisa9405/Refinitiv-with-Python"
+url: "https://github.com/luisa9405/Refinitiv-with-Python"
+abstract: "Introductory Jupyter notebooks for educational use with LSEG Workspace CodeBook and external Python."
+keywords:
+  - Refinitiv
+  - LSEG Workspace
+  - CodeBook
+  - financial data
+  - research tutorials

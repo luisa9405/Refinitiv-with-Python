@@ -1,11 +1,38 @@
 # Refinitiv / LSEG with Python
 
 
+## How to Cite This Repository
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22881554.svg)](https://doi.org/10.5281/zenodo.22881554)
 
-**How to cite:** If you use these notebooks or teaching materials in
-your research, please cite this repository using the DOI above.
-Please cite LSEG separately as the financial data provider.
+If you use these Python notebooks, code examples, or teaching materials
+in your research, academic publications, or educational activities,
+please cite this repository.
+
+**Recommended citation (APA style):**
+
+Rodríguez-Fajardo, L. M. (2026). *Refinitiv with Python: Educational
+Research Tutorials* (Version 1.0.0) [Computer software]. Zenodo.
+https://doi.org/10.5281/zenodo.22881554
+
+**BibTeX:**
+
+```bibtex
+@software{rodriguezfajardo2026refinitiv,
+  author    = {Rodríguez-Fajardo, Luisa María},
+  title     = {Refinitiv with Python: Educational Research Tutorials},
+  year      = {2026},
+  version   = {1.0.0},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.22881554},
+  url       = {https://doi.org/10.5281/zenodo.22881554}
+}
+```
+
+**Data attribution:** LSEG is the provider of the financial data accessed
+through these tutorials. Please acknowledge and cite LSEG separately
+as the data source, in accordance with your institution's data-use
+requirements.
 
 **Financial data for research · From data discovery to reproducible access with Python**
 

@@ -1,24 +1,55 @@
-# Refinitiv-with-Python
-Everything you need to know about Refinitiv with Python 
+# Refinitiv / LSEG with Python
 
-On this page, you will find a collection of scripts and tools developed in Python to help you download and process financial data from Refinitiv efficiently and effectively.
+**Financial data for research · From data discovery to reproducible access with Python**
 
-# About Refinitiv
+Educational Jupyter notebooks for researchers using **LSEG Workspace (formerly Refinitiv Workspace / Eikon)**. Learn to find the correct company or instrument, select documented data items, and retrieve corporate, financial, and market information with Python.
 
-Refinitiv is one of the world's leading financial data and solutions providers for global markets. It offers a wide range of market data, news, analysis, and tools essential for financial professionals, investors, and businesses worldwide.
+> **Seminar slides:** [Financial data for research — Introduction to Workspace (PDF)](PDF_Introduction.pdf). The repository owner maintains the general-audience version of the presentation at this path.
 
-# Why Python?
+## Choose your working environment
 
-Python has become one of the most popular and versatile programming languages in the field of finance and data science. Its clear and readable syntax and the large number of libraries and tools available make it ideal for analyzing financial data and automating related tasks.
+| | [External Python](External%20Python/) | [CodeBook](CodeBook/) |
+|---|---|---|
+| Where Python runs | On your computer (e.g., Jupyter or VS Code) | In the cloud-hosted notebook environment integrated into Workspace |
+| Setup | Install and manage a local Python environment | Use the Python libraries available in CodeBook |
+| Connection | Usually a **Desktop Session** through an authorised, running Workspace application for the examples in this repository | A Workspace-connected session in the CodeBook environment |
+| Where output files are saved | On your local machine | In your CodeBook project; download files when needed |
+| API use | Yes | **Yes — CodeBook also uses data APIs** |
 
-# What will you find here?
+**Important distinction:** Running Python outside CodeBook does **not**, by itself, mean having a separate, direct LSEG Data Platform subscription. A local Python notebook can connect through Workspace Desktop. A direct platform session is another access route and requires the corresponding credentials and entitlements.
 
-On this page, you will find a variety of Python scripts and code examples that will allow you to access Refinitiv data. These scripts cover a wide range of functionality, from downloading historical data to retrieving quotes in real-time, and are designed to be easily customizable and extensible to your specific needs.
+## Follow the research workflow
 
-# Contributions
+1. **Discover:** Search companies, instruments, markets, and identifiers in Workspace. Distinguish a company/entity from its listed securities.
+2. **Define:** Locate the exact data-item codes and parameters using Data Item Browser (DIB) and CodeCreator.
+3. **Retrieve:** Run the appropriate notebook in [CodeBook](CodeBook/) or [External Python](External%20Python/).
+4. **Document:** Record the identifiers, screening criteria, fields, dates, reporting frequency, currency, scaling and extraction date used in your study.
 
-Contributions are welcome! Feel free to submit a pull request if you have any scripts or tools you would like to share with the community. You can also report problems, suggest improvements, or add topics by opening an issue in the repository.
+## Tutorials
 
-We hope you find these resources helpful and that they help you in your financial and data analysis projects. 
+### [01 · External Python](External%20Python/)
 
-# Thank you for visiting our website!
+Original local-Python notebooks on authentication, data-item discovery, historical financial statements, historical stock prices, company screening, and peer analysis. Some notebooks use the **legacy `eikon` library**; check their specific requirements and authentication method before executing them.
+
+### [02 · CodeBook](CodeBook/)
+
+Hands-on examples using `refinitiv.data` in the integrated Workspace environment:
+
+- [01 — Companies by country](CodeBook/01_Companies_by_Country.ipynb)
+- [02 — Company information](CodeBook/02_Company_Information.ipynb)
+- [03 — Financial data and monthly prices](CodeBook/03_Financial_Data_and_Monthly_Prices.ipynb)
+
+The tutorials are educational examples, **not pre-extracted datasets**. Their results depend on the current data, the requested instrument, access permissions and the specific field definitions.
+
+## Research and responsible use
+
+Access and coverage depend on institutional permissions and LSEG data entitlements. Verify company/entity versus instrument identifiers, fiscal period-end dates, units, currencies, field definitions, and the date of extraction before using observations in empirical research. **Do not upload licensed downloaded data, institution-specific files, passwords, API keys, app keys, or tokens to this public repository.**
+
+This is an independent educational repository and is not an official LSEG product or an endorsement by LSEG.
+
+## Author
+
+**Luisa María Rodríguez-Fajardo**  
+PhD Candidate in Business Administration · University of Chile
+
+Feedback and educational contributions are welcome through GitHub Issues and Pull Requests.

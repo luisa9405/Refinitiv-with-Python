@@ -1,5 +1,12 @@
 # Refinitiv / LSEG with Python
 
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22881554.svg)](https://doi.org/10.5281/zenodo.22881554)
+
+**How to cite:** If you use these notebooks or teaching materials in
+your research, please cite this repository using the DOI above.
+Please cite LSEG separately as the financial data provider.
+
 **Financial data for research · From data discovery to reproducible access with Python**
 
 Educational Jupyter notebooks for researchers using **LSEG Workspace (formerly Refinitiv Workspace / Eikon)**. Learn to find the correct company or instrument, select documented data items, and retrieve corporate, financial, and market information with Python.
